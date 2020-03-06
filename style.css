@@ -1,29 +1,129 @@
 /* CASCADING STYLESHEET */
 
+/* Global */
+*{
+    /* Corrigino o comportamento padrão do css */
+    box-sizing: border-box;
+}
+
+
 html, body {
     margin: 0;
 }
 
-/*   Alinhamentos, Espaçamento, Larguras e Alturas     */
-
-header, main, footer {
-    text-align: center;
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+    /* Fonte */
+    font-family: 'Roboto', sans-serif;
+    
+    background-color: #e7e7e7;
 }
 
-.donors {
+.logo {
+    width: 120px;
+    margin: 70px 0px;
+}
+
+
+/* Titulos */
+header h1, main h2 {
+    margin-bottom: 70px;
+}
+
+.form h2 {
+    text-align: right;
+    color: #e7e7e7;
+    font-size: 18px;
+}
+
+h1,h2 {
+    color: #000000cc;
+}
+
+main h2 span {
+    color: #ff4f4f;
+}
+
+
+/*   Alinhamentos, Espaçamento, Larguras e Alturas     */
+main .donors {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+/* Form */
 .form {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 45px;
+    background-color: #ff4f4f;
+    padding: 16px 64px;
+    align-items: center;
+    border-radius: 6px;
+}
+form input,
+form button {
+    
+    /* Largura */
+    width: 100%;
+    
+    /* Espaçamento */
+    margin-bottom: 4px;
+    
+    /* Preenchimento */
+    padding: 8px 16px;
+    
+    /* Bordas */
+    border-radius: 4px;
+    border: 1px #ffffff88 solid;
+    
+}
+
+form input {
+    background-color: transparent;
+}
+
+form input::placeholder {
+    color: #ffffffaa;
+} 
+
+form button {
+    font-weight: bold;
+}
+
+/* Estrutura */
+header, main, footer {
+    /* Alinhamento de texto */    
+    text-align: center;
 }
 
 header, .form, main {
-    margin-bottom: 70px;
+    /* Espaçamento com margin */
+    margin: 0 auto 70px auto;
+    
+    /* Limites da pagina */
     width: 90%;
     max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+/* Header */
+header button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #ff4f4f;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-top: 16px;
+}
+
+
+/* Rodapé */
+footer {
+    margin-top: auto;
+    padding: 16px;
+    border: 1px solid #eee;
 }
