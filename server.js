@@ -18,5 +18,9 @@ const copo = {
 }
 
 console.log(copo.verificarSeOCopoEstaSujo("está sujo"))
+console.log(copo.verificarSeOCopoEstaSujo("não está sujo"))
+console.log(copo.verificarSeOCopoEstaSujo("não está sujo"))
+console.log(copo.verificarSeOCopoEstaSujo("está sujo"))
+console.log(copo.verificarSeOCopoEstaSujo("não está sujo"))
 //console.log(copo.verificarSeOCopoEstaSujo())
 //copo.verificarSeOCopoEstaSujo()
