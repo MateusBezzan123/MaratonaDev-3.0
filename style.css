@@ -27,6 +27,9 @@ body {
     margin: 70px 0px;
 }
 
+header p {
+    font-size: 14px;
+}
 
 /* Titulos */
 header h1, main h2 {
@@ -119,7 +122,33 @@ header button {
     border: none;
     margin-top: 16px;
 }
+.blood {
+    color: #ff4f4f;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
+.blood::before {
+    content: "";
+    background-color: #ff4f4f11;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    
+    /* Fazer a gotinha */
+    border-radius: 50%;
+    border-top-right-radius: 0%;
+    transform: rotate(-45deg);
+}
+
+.donor p {
+    margin-top: 24px;
+    font-size: 14px;
+}
 
 /* Rodapé */
 footer {
