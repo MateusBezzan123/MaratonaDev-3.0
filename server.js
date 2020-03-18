@@ -37,6 +37,9 @@ const donors = [
 server.get("/", function(req,res){
     return res.render("index.html",{ donors })
 })
+server.post("/", function(res,req){
+    
+})
 
 //ligar o servidor e permitir o acesso na porta 3000
 server.listen(3000,function(){
