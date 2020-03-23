@@ -1,13 +1,6 @@
 // configurando o servidor
 const express = require("express")
 const server = express()
-const bodyParser = require('body-parser')
-
-// parse application/x-www-form-urlencoded
-server.use(bodyParser.urlencoded({ extended: false }))
-
-// parse application/json
-server.use(bodyParser.json())
 
 //configurar o servidor para  apresentar arquivos estáticos
 server.use(express.static('public'))
@@ -18,7 +11,7 @@ server.use(express.urlencoded({ extended: true }))
 // configurando a template engine
 const nunjucks = require("nunjucks")
 
-nunjucks.configure("./",{
+nunjucks.configure("./", {
     express: server,
     noCache:true, //boolean ou booleano aceita 2 valores,verdadiero ou falso
 })
